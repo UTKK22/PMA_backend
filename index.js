@@ -10,6 +10,8 @@ const peopleRoutes=require('./routes/People')
 const cookieParser=require('cookie-parser')
 const app = express();
 
+
+
 // Middleware to parse JSON and URL-encoded data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,7 +20,7 @@ app.use(express.json())
 app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:5173', // Your frontend origin
+  origin: 'https://pma-frontend-msjs.vercel.app', // Your frontend origin
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, // Allow credentials (cookies)
 };
