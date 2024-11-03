@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5030;
+const PORT = process.env.PORT || 4100;
 
 app.listen(PORT, async () => {
   await connectDatabase(); // Connect to the database
