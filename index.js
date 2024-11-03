@@ -19,18 +19,13 @@ app.use(express.json())
 //Cookies
 app.use(cookieParser());
 // CORS configuration
-// const corsOptions = {
-//   origin: 'https://pma-frontend-msjs.vercel.app', // Your frontend origin
-//   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
-//   credentials: true, // Allow credentials (cookies)
-// };
-// app.use(cors(corsOptions));
-app.use(cors({ origin: '' }));
-// app.use(cors({
-//   origin: 'http://localhost:5173', // Allow requests only from this origin
-//   methods: ['GET', 'POST', 'DELETE', 'PATCH', 'PUT'], // Allowed HTTP methods
-//   credentials:true // Allow credentials (like cookies)
-// }));
+const corsOptions = {
+  origin: 'https://pma-frontend-msjs.vercel.app', // Your frontend origin
+  methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
+  credentials: true, // Allow credentials (cookies)
+};
+app.use(cors(corsOptions));
+
 
 app.use('/api/users', userRoutes); 
 app.use('/api/tasks', taskRoutes); 
