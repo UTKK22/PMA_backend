@@ -22,11 +22,10 @@ app.use(cookieParser());
 const corsOptions = {
   origin: 'https://pma-frontend-msjs.vercel.app', // Your frontend origin
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
-  allowedHeaders: ['Content-Type', 'Authorization','Access-Control-Allow-Origin'],
+  // allowedHeaders: ['Content-Type', 'Authorization','Access-Control-Allow-Origin'],
   credentials: true, // Allow credentials (cookies)
 };
 app.use(cors(corsOptions));
-app.options('/api/users/login',cors(corsOptions));
 
 app.use('/api/users', userRoutes); 
 app.use('/api/tasks', taskRoutes); 
