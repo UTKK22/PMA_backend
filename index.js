@@ -25,7 +25,7 @@ const corsOptions = {
   credentials: true, // Allow credentials (cookies)
 };
 app.use(cors(corsOptions));
-
+app.options('*',cors());
 
 app.use('/api/users', userRoutes); 
 app.use('/api/tasks', taskRoutes); 
