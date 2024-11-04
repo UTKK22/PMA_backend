@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
-  origin: 'https://pma-frontend-kohl.vercel.app', 
+  origin: '*', 
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, 
 };
@@ -39,7 +39,7 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/people',peopleRoutes);
 
 app.get('/', (req, res) => {
-  const currentTime = moment().format('HH:mm:ss');
+  const currentTime = moment.tz('India/Mumbai').format('HH:mm:ss');
   res.json({
     time: currentTime,
     app: 'PROJECT_MANAGEMENT_APP',
