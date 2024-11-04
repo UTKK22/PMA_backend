@@ -39,7 +39,7 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/people',peopleRoutes);
 
 app.get('/', (req, res) => {
-  const currentTime = moment.tz('India/Mumbai').format('HH:mm:ss');
+  const currentTime = new Date().toLocaleTimeString();
   res.json({
     time: currentTime,
     app: 'PROJECT_MANAGEMENT_APP',
