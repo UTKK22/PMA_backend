@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
-  origin: '*', // Your frontend origin
+  origin: 'https://pma-frontend-msjs.vercel.app', 
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, 
 };
@@ -47,3 +47,4 @@ app.listen(PORT, async () => {
   await connectDatabase(); // Connect to the database
   console.log(`Server is up and running on PORT ${PORT}`);
 });
+module.exports=app;
