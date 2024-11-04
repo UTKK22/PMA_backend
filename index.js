@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
-  origin: 'https://pma-frontend-five.vercel.app', 
+  origin: 'https://pma-frontend-kohl.vercel.app', 
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, 
 };
