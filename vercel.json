@@ -1,4 +1,6 @@
 {
+    
+        "buildCommand": "next build",
     "version": 2,
     "routes": [
         {
