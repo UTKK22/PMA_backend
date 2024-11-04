@@ -27,6 +27,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self' https://vercel.live; style-src 'self' 'unsafe-inline'"
+  );
+  next();
+});
 app.use('/api/users', userRoutes); 
 app.use('/api/tasks', taskRoutes); 
 app.use('/api/people',peopleRoutes);
