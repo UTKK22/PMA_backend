@@ -39,7 +39,7 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/people',peopleRoutes);
 
 app.get('/', (req, res) => {
-  const currentTime = moment().tz('America/New_York').format('HH:mm:ss');
+  const currentTime = moment().format('HH:mm:ss');
   res.json({
     time: currentTime,
     app: 'PROJECT_MANAGEMENT_APP',
