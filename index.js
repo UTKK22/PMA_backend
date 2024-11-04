@@ -9,7 +9,7 @@ const taskRoutes = require('./routes/Task');
 const peopleRoutes=require('./routes/People')
 const cookieParser=require('cookie-parser')
 const app = express();
-
+const moment =require('moment')
 
 
 // Middleware to parse JSON and URL-encoded data
@@ -39,7 +39,7 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/people',peopleRoutes);
 
 app.get('/', (req, res) => {
-  const currentTime = new Date().toLocaleTimeString();
+  const currentTime = moment().tz('India').format('HH:mm:ss');
   res.json({
     time: currentTime,
     app: 'PROJECT_MANAGEMENT_APP',
