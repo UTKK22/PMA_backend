@@ -15,12 +15,12 @@ const app = express();
 // Middleware to parse JSON and URL-encoded data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json())
+// app.use(express.json())
 //Cookies
 app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
-  origin: 'https://pma-frontend-msjs.vercel.app/', 
+  origin: ' ', 
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, 
 };
