@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // CORS configuration
 const corsOptions = {
-  origin: '*', 
+  origin: 'https://pma-frontend-ghuh.onrender.com', 
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, 
 };
