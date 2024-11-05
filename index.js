@@ -22,7 +22,7 @@ app.use(cookieParser());
 const corsOptions = {
   origin: [
     'https://pma-frontend-ghuh.onrender.com', 
-    'http://localhost:4000',
+    'http://localhost:5173',
   ],
   methods:['GET', 'POST', 'DELETE', 'PATCH', 'PUT'],
   credentials: true, 
